@@ -5,7 +5,9 @@ This project takes a raw, messy customer contact list and cleans it into a consi
 
 ## Files
 - `raw_data.csv` – original, messy dataset
-- `cleaned_data.csv` – cleaned, standardized dataset
+- `cleaned_data.csv` – cleaned dataset (Google Sheets version)
+- `clean_data.py` – Python script replicating the same cleaning logic using pandas
+- `cleaned_data_python.csv` – cleaned dataset (Python version)
 
 ## Issues Identified in Raw Data
 - Phone numbers in four different formats (dashes, slashes, pipes, plain digits)
@@ -29,4 +31,10 @@ This project takes a raw, messy customer contact list and cleans it into a consi
 The Address column was not split into separate City/State fields, since formatting was inconsistent across rows and doing so would have required inferring data that wasn't reliably present. This was a deliberate choice to avoid fabricating information.
 
 ## Tools Used
-Google Sheets — REGEXREPLACE, REGEXMATCH, TRIM, TEXT functions
+- Google Sheets — REGEXREPLACE, REGEXMATCH, TRIM, TEXT functions
+- Python — pandas, re (regular expressions)
+
+## Note
+This project was completed twice using two different approaches — once in Google Sheets 
+(formulas) and once in Python (pandas) — to demonstrate the same data cleaning logic 
+applied with both spreadsheet tools and code.
